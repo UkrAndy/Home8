@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework8</title>
+    <script>
+        //Задача 1. Дано масив рядків. Вивести ті, у яких є цифри (використати метод test та регулярні вирази).
+        const strNum = ['asd123', '123asd', 'asd', '123', 'ghdf']
+        const regNum = /\d/
+        const newStr = strNum.filter(x => {
+            if (regNum.test(x))
+                return x
+        })
+        document.write(`${newStr} <br/>`)
+        //Задача 2. Дано масив рядків. Вивести ті, у яких немає цифр.
+        const strNumbers = ['asd123', '123asd', 'asd', '123', 'ghdf']
+        const regStr = /\d/
+        const newstrNumbers = strNumbers.filter(x => {
+            if (!regStr.test(x))
+                return x
+        })
+        document.write(`${newstrNumbers} <br/>`)
+        //Задача 3. Дано масив рядків. Вивести ті, у яких є голосні літери.
+        const randStrings = ['фив', 'вну', 'ппп', 'ффф', 'ааа', 'ццц', 'язд']
+        const newRandStrinds = randStrings.filter(x => {
+            const regRand = /[аоуеиіїяює]/
+            if (regRand.test(x))
+                return x
+        })
+        document.write(`${newRandStrinds} <br/>`)
+        //Задача 4. Дано масив рядків. Вивести ті, у яких немає голосних літер.
+        const randStrings1 = ['фив', 'вну', 'ппп', 'ффф', 'ааа', 'ццц', 'язд']
+        const newRandStrinds1 = randStrings1.filter(x => {
+            const regRand1 = /[аоуеиіїяює]/
+            if (!regRand1.test(x))
+                return x
+        })
+        document.write(`${newRandStrinds1} <br/>`)
+        //Задача 5. Дано масив рядків. Вивести ті, у яких є або цифра 1 або цифра 3.
+        const randStringsNums = ['фив1', 'вну', 'ппп3', 'ффф', 'ааа3', 'ццц', 'язд']
+        const newRandStrindsNums = randStringsNums.filter(x => {
+            const regRandNums = /[13]/
+            if (regRandNums.test(x))
+                return x
+        })
+        document.write(`${newRandStrindsNums} <br/>`)
+        //Задача 6. Дано рядок тексту, вивести усі числа, які є у тексті.
+        const strText = 'so2me1text2this355'
+        document.write(`${strText.match(/\d/gi)} <br />`)
+        //Задача 7. Дано рядок тексту. Знайти усі знаки пунктуації, які були використано.
+        const strText1 = 'so2m, e1text2 - th. is35 ,,.5...'
+        document.write(`${strText1.match(/[,\.-]/gi)} <br />`)
+        //Задача 8. Дано рядок тексту. Вивести усі складові, які розділені розділовими знаками.
+        const strText2 = 'so2m, e1text2 - th. is35 ,,.5...'
+        document.write(`${strText2.match(/\b\w*[^,]\b/gi)} <br />`)
+        //Дано рядок тексту. Перевірити, чи містить він дату у форматі dd.mm.yyyy (dd- день, mm- місяць, yyyy- рік)
+        const strText3 = '12.12.19932w 12.121.19392 12/12/1992'
+        document.write(`${strText3.match(/\d{2}\.\d{2}\.\d{4}/gi)} <br />`)
+        //Задача 10. Дано рядок тексту. Підрахувати кількість двоцифрових чисел у рядку.
+        const strNums = '12asda24sadasda4asdas44ssdad55 5222'
+        document.write(`${strNums.match(/\d{2}/gi).length} <br />`)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
