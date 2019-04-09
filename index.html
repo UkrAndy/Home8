@@ -10,7 +10,7 @@
         //Задача 1. Дано масив рядків. Вивести ті, у яких є цифри (використати метод test та регулярні вирази).
         const strNum = ['asd123', '123asd', 'asd', '123', 'ghdf']
         const regNum = /\d/
-        const newStr = strNum.filter(x => {
+        const newStr = strNum.filter(x => {       Тут краще було: strNum.filter(x =>regNum.test(x))
             if (regNum.test(x))
                 return x
         })
@@ -18,7 +18,7 @@
         //Задача 2. Дано масив рядків. Вивести ті, у яких немає цифр.
         const strNumbers = ['asd123', '123asd', 'asd', '123', 'ghdf']
         const regStr = /\d/
-        const newstrNumbers = strNumbers.filter(x => {
+        const newstrNumbers = strNumbers.filter(x => {   Тут у наступних аналогічно (підійдіть після заняття)
             if (!regStr.test(x))
                 return x
         })
